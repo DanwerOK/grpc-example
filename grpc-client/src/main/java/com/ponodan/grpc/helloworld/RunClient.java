@@ -20,7 +20,7 @@ public class RunClient {
         // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid needing certificates.
         channel = ManagedChannelBuilder
                 .forAddress(host, port)
-                //.usePlaintext()
+                .usePlaintext()
                 .build();
         blockingStub = GreeterGrpc.newBlockingStub(channel);
     }
